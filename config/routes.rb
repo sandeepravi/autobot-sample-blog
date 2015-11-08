@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 	# Engines
+  mount ApiTaster::Engine => "/api_taster"
 
 	# root
 
@@ -11,6 +12,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+	   resources :comments do
+   	end
+
+	
 
     end
   end
